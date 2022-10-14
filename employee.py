@@ -18,14 +18,15 @@ class Employee:
     def __str__(self):
         tempExplenamtion = self.name
         if self.contractType == "monthly":
-            tempExplenamtion = tempExplenamtion + " works on a monthly salary of " + str(self.contractPay)
+            tempExplenamtion = tempExplenamtion + " works on a monthly salary of " + str(self.contractPay) 
         else:
             tempExplenamtion = tempExplenamtion + " works on a contract of " + str(self.contractLength) +" at " + str(self.contractPay) + "/hr"
             
         if  self.bonusType == "contract":
-            tempExplenamtion = tempExplenamtion + ". and receives a commission for " + str(self.bonusCount) +" contract(s) at " + str(self.bonusPay) + "/contract"
+            tempExplenamtion = tempExplenamtion + " and receives a commission for " + str(self.bonusCount) +" contract(s) at " + str(self.bonusPay) + "/contract"
         elif self.bonusType == "fixed":
-            tempExplenamtion = tempExplenamtion + ". and receives a bonus commission of " + str(self.bonusPay)
+            tempExplenamtion = tempExplenamtion + " and receives a bonus commission of " + str(self.bonusPay)
+
             
         tempExplenamtion = tempExplenamtion + ". their total pay is " + str(self.get_pay()) +"."
         return tempExplenamtion
